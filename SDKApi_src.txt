@@ -1,0 +1,450 @@
+./pack_reloc/pack_reloc.c:void apply_reloc(uint32_t *image, const uint8_t *rel, uint32_t diff) {
+./pack_reloc/pack_reloc.c:int main(int argc, char **argv) {
+./fpdoom/libc/malloc.h:void _malloc_init(void *addr, size_t size) {
+./fpdoom/libc/malloc.h:void PREFIX(free)(void *ptr) {
+./fpdoom/libc/printf.h:int PREFIX(name)(__VA_ARGS__, ...) { \
+./fpdoom/libc/printf.h:int PREFIX(v##name)(__VA_ARGS__, va_list va) { \
+./fpdoom/common.h:void *memcpy(void *dst, const void *src, size_t count);
+./fpdoom/common.h:void *memmove(void *dst, const void *src, size_t count);
+./fpdoom/common.h:void *memset(void *dst, int ch, size_t count);
+./fpdoom/common.h:unsigned fastchk16(unsigned crc, const void *src, int len);
+./fpdoom/libc.c:sighandler_t signal(int signum, sighandler_t handler) {
+./fpdoom/libc.c:int getchar(void) {
+./fpdoom/libc.c:int putchar(int ch) {
+./fpdoom/libc.c:int puts(const char *str) {
+./fpdoom/libc.c:int fputs(const char *str, FILE *f) {
+./fpdoom/libc.c:void sys_exit(void);
+./fpdoom/libc.c:typedef void (*atexit_fn_t)(void);
+./fpdoom/libc.c:int atexit(void (*func)(void)) {
+./fpdoom/libc.c:void exit(int code) {
+./fpdoom/libc.c:void __assert2(const char *file, int line, const char *func, const char *msg) {
+./fpdoom/libc.c:void _debug_msg(const char *msg) {
+./fpdoom/libc.c:void _sig_intdiv(void) {
+./fpdoom/libc.c:void _sig_intovf(void) {
+./fpdoom/libc.c:void _stdio_init(void) {
+./fpdoom/libc.c:int _argv_copy(char ***argvp, int argc, char *src) {
+./fpdoom/libc.c:int _argv_init(char ***argvp, int skip) {
+./fpdoom/libc.c:int fflush(FILE *f) X(fat_fflush)
+./fpdoom/libc.c:int fgetc(FILE *f) X(fat_fgetc)
+./fpdoom/libc.c:int fputc(int ch, FILE *f) X(fat_fputc)
+./fpdoom/libc.c:size_t fread(void *dst, size_t size, size_t count, FILE *f) X(fat_fread)
+./fpdoom/libc.c:size_t fwrite(const void *src, size_t size, size_t count, FILE *f) X(fat_fwrite)
+./fpdoom/libc.c:int fseek(FILE *f, long offset, int origin) X(fat_fseek)
+./fpdoom/libc.c:long ftell(FILE *f) X(fat_ftell)
+./fpdoom/libc.c:FILE *fopen(const char *name, const char *mode) X(fat_fopen)
+./fpdoom/libc.c:int fclose(FILE *f) X(fat_fclose)
+./fpdoom/libc.c:int fflush(FILE *f) {
+./fpdoom/libc.c:int fgetc(FILE *f) {
+./fpdoom/libc.c:int fputc(int ch, FILE *f) {
+./fpdoom/libc.c:size_t fread(void *dst, size_t size, size_t count, FILE *f) {
+./fpdoom/libc.c:size_t fwrite(const void *src, size_t size, size_t count, FILE *f) {
+./fpdoom/libc.c:int fseek(FILE *f, long offset, int origin) {
+./fpdoom/libc.c:long ftell(FILE *f) {
+./fpdoom/libc.c:FILE *fopen(const char *name, const char *mode) {
+./fpdoom/libc.c:int fclose(FILE *f) {
+./fpdoom/libc.c:void setbuf(FILE *f, char *buf) {
+./fpdoom/entry2.c:void _debug_msg(const char *msg);
+./fpdoom/entry2.c:void _malloc_init(void *addr, size_t size);
+./fpdoom/entry2.c:void _stdio_init(void);
+./fpdoom/entry2.c:int _argv_init(char ***argvp, int skip);
+./fpdoom/entry2.c:int _argv_copy(char ***argvp, int argc, char *src);
+./fpdoom/entry2.c:size_t app_mem_reserve(void *start, size_t size);
+./fpdoom/entry2.c:void sys_set_handlers(void);
+./fpdoom/entry2.c:int main(int argc, char **argv);
+./fpdoom/entry2.c:void entry_main2(char *image_addr, uint32_t image_size, uint32_t bss_size, int arg_skip) {
+./fpdoom/fatfile.c:size_t fat_fread(void *dst, size_t size, size_t count, fatfile_t *f) {
+./fpdoom/fatfile.c:int fat_fgetc(fatfile_t *f) {
+./fpdoom/fatfile.c:size_t fat_fwrite(const void *src, size_t size, size_t count, fatfile_t *f) {
+./fpdoom/fatfile.c:int fat_fputc(int ch, fatfile_t *f) {
+./fpdoom/fatfile.c:fatfile_t *fat_fopen(const char *name, const char *mode) {
+./fpdoom/fatfile.c:int fat_fclose(fatfile_t *f) {
+./fpdoom/fatfile.c:int fat_fseek(fatfile_t *f, long offset, int origin) {
+./fpdoom/fatfile.c:long fat_ftell(fatfile_t *f) {
+./fpdoom/fatfile.c:int fat_fflush(fatfile_t *f) {
+./fpdoom/syscode.h:void enable_mmu(uint32_t *table, uint32_t domain);
+./fpdoom/syscode.h:void set_cpsr_c(uint32_t a);
+./fpdoom/syscode.h:int sys_lzma_decode(const uint8_t *src, unsigned src_size,
+./fpdoom/syscode.h:void scan_firmware(intptr_t fw_addr);
+./fpdoom/syscode.h:void sys_wait_ms(uint32_t delay);
+./fpdoom/syscode.h:void sys_wait_us(uint32_t delay);
+./fpdoom/syscode.h:void sys_wait_clk(uint32_t delay);
+./fpdoom/syscode.h:int sys_getkeymap(uint8_t *dest);
+./fpdoom/syscode.h:void adi_write(uint32_t addr, uint32_t val);
+./fpdoom/syscode.h:void sys_init(void);
+./fpdoom/syscode.h:void sys_start(void);
+./fpdoom/syscode.h:int sys_event(int *rkey);
+./fpdoom/syscode.h:void sys_brightness(unsigned val);
+./fpdoom/syscode.h:void sys_framebuffer(void *base);
+./fpdoom/syscode.h:void sys_start_refresh(void);
+./fpdoom/syscode.h:void sys_wait_refresh(void);
+./fpdoom/syscode.h:void sys_exit(void);
+./fpdoom/syscode.h:void sys_wdg_reset(unsigned val);
+./fpdoom/syscode.h:void invalidate_icache(void);
+./fpdoom/syscode.h:void clean_dcache(void);
+./fpdoom/syscode.h:void clean_dcache_range(void *start, void *end);
+./fpdoom/syscode.h:void clean_invalidate_dcache(void);
+./fpdoom/syscode.h:void clean_invalidate_dcache_range(void *start, void *end);
+./fpdoom/syscode.h:void keytrn_init(void);
+./fpdoom/syscode.h:void lcd_appinit(void);
+./fpdoom/syscomm.c:int sys_lzma_decode(const uint8_t *src, unsigned src_size,
+./fpdoom/syscomm.c:void scan_firmware(intptr_t fw_addr) {
+./fpdoom/syscomm.c:void sys_wait_ms(uint32_t delay) {
+./fpdoom/syscomm.c:void sys_wait_us(uint32_t delay) {
+./fpdoom/syscomm.c:int sys_getkeymap(uint8_t *dest) {
+./fpdoom/lcd_mono.h:void lcd_send_hx1230(unsigned idx, unsigned val);
+./fpdoom/lcd_mono.h:void lcd_send_ssd1306(unsigned idx, unsigned val);
+./fpdoom/lcd_mono.h:void lcd_refresh_st7567_asm(uint8_t *s);
+./fpdoom/lcd_mono.h:void lcd_refresh_hx1230(uint8_t *s);
+./fpdoom/lcd_mono.h:void lcd_refresh_ssd1306(uint8_t *s);
+./fpdoom/lcd_mono.h:static void (*lcd_refresh_mono)(uint8_t*);
+./fpdoom/microfat.c:int fat_entry_low(fatdata_t *fatdata, fat_entry_t *p) {
+./fpdoom/microfat.c:int fat_init(fatdata_t *fatdata, int part_num) {
+./fpdoom/microfat.c:unsigned fat_next_clust(fatdata_t *fatdata, unsigned clust) {
+./fpdoom/microfat.c:void fat_flush_buf1(fatdata_t *fatdata) {
+./fpdoom/microfat.c:void fat_flush_buf2(fatdata_t *fatdata) {
+./fpdoom/microfat.c:unsigned fat_alloc_clust(fatdata_t *fatdata, unsigned clust, uint32_t *start) {
+./fpdoom/microfat.c:void fat_free_chain(fatdata_t *fatdata, unsigned clust, unsigned val) {
+./fpdoom/microfat.c:int fat_enum_name(fatdata_t *fatdata, unsigned clust,
+./fpdoom/microfat.c:unsigned fat_dir_clust(fatdata_t *fatdata, const char *name) {
+./fpdoom/microfat.c:unsigned fat_read_simple(fatdata_t *fatdata, unsigned clust,
+./fpdoom/microfat.c:unsigned fat_make_dir(fatdata_t *fatdata, unsigned prev, const char *name) {
+./fpdoom/microfat.c:void fat_delete_entry(fatdata_t *fatdata, fat_entry_t *p) {
+./fpdoom/microfat.c:int fat_rmdir_check(fatdata_t *fatdata, unsigned clust) {
+./fpdoom/include/sys/stat.h:int mkdir(const char*, int);
+./fpdoom/include/sys/stat.h:int fstat(int, struct stat*);
+./fpdoom/include/sys/stat.h:int stat(const char*, struct stat*);
+./fpdoom/include/sys/stat.h:int fstatat(int, const char*, struct stat*, int);
+./fpdoom/include/stdio.h:int getchar(void);
+./fpdoom/include/stdio.h:int putchar(int);
+./fpdoom/include/stdio.h:int fgetc(FILE*);
+./fpdoom/include/stdio.h:int ungetc(int, FILE*);
+./fpdoom/include/stdio.h:int feof(FILE*);
+./fpdoom/include/stdio.h:int fputc(int, FILE*);
+./fpdoom/include/stdio.h:int puts(const char*);
+./fpdoom/include/stdio.h:int fputs(const char*, FILE*);
+./fpdoom/include/stdio.h:char *fgets(char*, int, FILE*);
+./fpdoom/include/stdio.h:FILE *fopen(const char*, const char*);
+./fpdoom/include/stdio.h:int fseek(FILE*, long, int);
+./fpdoom/include/stdio.h:long ftell(FILE*);
+./fpdoom/include/stdio.h:size_t fread(void*, size_t, size_t, FILE*);
+./fpdoom/include/stdio.h:size_t fwrite(const void*, size_t, size_t, FILE*);
+./fpdoom/include/stdio.h:int fclose(FILE*);
+./fpdoom/include/stdio.h:int fflush(FILE*);
+./fpdoom/include/stdio.h:void setbuf(FILE*, char*);
+./fpdoom/include/stdio.h:int printf(const char*, ...);
+./fpdoom/include/stdio.h:int sprintf(char*, const char*, ...);
+./fpdoom/include/stdio.h:int snprintf(char*, size_t, const char*, ...);
+./fpdoom/include/stdio.h:int fprintf(FILE*, const char*, ...);
+./fpdoom/include/stdio.h:int vprintf(const char*, va_list);
+./fpdoom/include/stdio.h:int vsprintf(char*, const char*, va_list);
+./fpdoom/include/stdio.h:int vsnprintf(char*, size_t, const char*, va_list);
+./fpdoom/include/stdio.h:int vfprintf(FILE*, const char*, va_list);
+./fpdoom/include/stdio.h:int sscanf(const char *, const char *, ...);
+./fpdoom/include/stdio.h:int fscanf(FILE*, const char*, ...);
+./fpdoom/include/stdlib.h:int atoi(const char*);
+./fpdoom/include/stdlib.h:long atol(const char*);
+./fpdoom/include/stdlib.h:long strtol(const char*, char**, int);
+./fpdoom/include/stdlib.h:void exit(int);
+./fpdoom/include/stdlib.h:int atexit(void(*)(void));
+./fpdoom/include/stdlib.h:void srand(unsigned);
+./fpdoom/include/stdlib.h:int rand(void);
+./fpdoom/include/stdlib.h:void qsort(void*, size_t, size_t,
+./fpdoom/include/time.h:time_t time (time_t*);
+./fpdoom/include/unistd.h:int open(const char*, int, ...);
+./fpdoom/include/unistd.h:int close(int);
+./fpdoom/include/unistd.h:ssize_t read(int, void*, size_t);
+./fpdoom/include/unistd.h:ssize_t write(int, const void*, size_t);
+./fpdoom/include/unistd.h:off_t lseek(int, off_t, int);
+./fpdoom/include/unistd.h:char *getcwd(char*, size_t);
+./fpdoom/include/unistd.h:int chdir(const char*);
+./fpdoom/include/unistd.h:int access(const char*, int);
+./fpdoom/include/unistd.h:int usleep(unsigned);
+./fpdoom/include/assert.h:void __assert2(const char *, int, const char *, const char *);
+./fpdoom/include/signal.h:typedef void (*sighandler_t)(int);
+./fpdoom/include/signal.h:sighandler_t signal(int signum, sighandler_t handler);
+./fpdoom/sfc.c:void sfc_init(void) {
+./fpdoom/sfc.c:void sfc_cmdclr(sfc_base_t *sfc) {
+./fpdoom/sfc.c:void sfc_write_status(int cs, unsigned val) {
+./fpdoom/sfc.c:void sfc_write_enable(int cs) {
+./fpdoom/sfc.c:void sfc_erase(int cs, int addr, int cmd, int addr_len) {
+./fpdoom/sfc.c:void sfc_write(int cs, int addr, const void *buf, unsigned size) {
+./fpdoom/sfc.c:void sfc_read(int cs, int addr, void *buf, unsigned size) {
+./fpdoom/sfc.c:void sfc_read_sfdp(int cs, int addr, void *buf, unsigned size) {
+./fpdoom/sfc.c:unsigned sfc_compare(int cs, int addr, const void *src0, unsigned size, uint32_t mode) {
+./fpdoom/sfc.c:void sfc_spiread(int cs) {
+./fpdoom/syscode.c:void adi_write(uint32_t addr, uint32_t val) {
+./fpdoom/syscode.c:void adi_write_or(uint32_t addr, uint32_t val) {
+./fpdoom/syscode.c:void sys_brightness(unsigned val) {
+./fpdoom/syscode.c:void sys_start_refresh(void) {
+./fpdoom/syscode.c:void sys_wait_refresh(void) {
+./fpdoom/syscode.c:void sys_framebuffer(void *base) {
+./fpdoom/syscode.c:void eic_mask_or(unsigned val) {
+./fpdoom/syscode.c:int eic_read(void) {
+./fpdoom/syscode.c:int keypad_read_pb(void) {
+./fpdoom/syscode.c:int sys_event(int *rkey) {
+./fpdoom/syscode.c:void set_mode_sp(int mode, uint32_t sp);
+./fpdoom/syscode.c:void invalidate_tlb(void);
+./fpdoom/syscode.c:void invalidate_tlb_mva(uint32_t);
+./fpdoom/syscode.c:void sys_prep_vectors(uint32_t *ttb) {
+./fpdoom/syscode.c:void _debug_msg(const char *msg);
+./fpdoom/syscode.c:void def_data_except(uint32_t fsr, uint32_t far, uint32_t pc) {
+./fpdoom/syscode.c:void app_data_except(uint32_t fsr, uint32_t far, uint32_t pc);
+./fpdoom/syscode.c:void sys_set_handlers(void) {
+./fpdoom/syscode.c:void sys_init(void) {
+./fpdoom/syscode.c:void sys_start(void) {
+./fpdoom/syscode.c:void sys_exit(void) {
+./fpdoom/syscode.c:void sys_wdg_reset(unsigned val) {
+./fpdoom/scr_update.c:void D_DoomMain(void);
+./fpdoom/scr_update.c:int main(int argc, char **argv) {
+./fpdoom/scr_update.c:int recalc_cache(unsigned cache_kb) {
+./fpdoom/scr_update.c:void lcd_appinit(void) {
+./fpdoom/usbio.h:void usb_init_base(void);
+./fpdoom/usbio.h:void usb_init(void);
+./fpdoom/usbio.h:int usb_getchar(int wait);
+./fpdoom/usbio.h:int usb_read(void *dst, unsigned len, int wait);
+./fpdoom/usbio.h:int usb_write(const void *src, unsigned len);
+./fpdoom/sdio.c:void sdio_sdfreq_val(sdio_base_t *sdio, unsigned val) {
+./fpdoom/sdio.c:void sdio_init(void) {
+./fpdoom/sdio.c:int sdcard_init(void) {
+./fpdoom/sdio.c:int sdio_read_block(uint32_t idx, uint8_t *buf) {
+./fpdoom/sdio.c:int sdio_write_block(uint32_t idx, uint8_t *buf) {
+./fpdoom/keytrn.c:void keytrn_init(void) {
+./fpdoom/microfat.h:int fat_init(fatdata_t *fatdata, int part_num);
+./fpdoom/microfat.h:unsigned fat_next_clust(fatdata_t *fatdata, unsigned clust);
+./fpdoom/microfat.h:void fat_flush_buf1(fatdata_t *fatdata);
+./fpdoom/microfat.h:void fat_flush_buf2(fatdata_t *fatdata);
+./fpdoom/microfat.h:unsigned fat_alloc_clust(fatdata_t *fatdata, unsigned clust, uint32_t *start);
+./fpdoom/microfat.h:void fat_free_chain(fatdata_t *fatdata, unsigned clust, unsigned end);
+./fpdoom/microfat.h:unsigned fat_next_clust(fatdata_t *fatdata, unsigned clust) {
+./fpdoom/microfat.h:int fat_enum_name(fatdata_t *fatdata, unsigned clust,
+./fpdoom/microfat.h:unsigned fat_dir_clust(fatdata_t *fatdata, const char *name);
+./fpdoom/microfat.h:unsigned fat_read_simple(fatdata_t *fatdata, unsigned clust,
+./fpdoom/microfat.h:unsigned fat_make_dir(fatdata_t *fatdata, unsigned clust,
+./fpdoom/microfat.h:void fat_delete_entry(fatdata_t *fatdata, fat_entry_t *p);
+./fpdoom/microfat.h:int fat_rmdir_check(fatdata_t *fatdata, unsigned clust);
+./fpdoom/microfat.h:unsigned fat_entry_clust(fat_entry_t *p) {
+./fpdoom/fatfile.h:size_t fat_fread(void *dst, size_t size, size_t count, fatfile_t *f);
+./fpdoom/fatfile.h:size_t fat_fwrite(const void *src, size_t size, size_t count, fatfile_t *f);
+./fpdoom/fatfile.h:int fat_fgetc(fatfile_t *f);
+./fpdoom/fatfile.h:int fat_fputc(int ch, fatfile_t *f);
+./fpdoom/fatfile.h:fatfile_t *fat_fopen(const char *name, const char *mode);
+./fpdoom/fatfile.h:int fat_fclose(fatfile_t *f);
+./fpdoom/fatfile.h:int fat_fseek(fatfile_t *f, long offset, int origin);
+./fpdoom/fatfile.h:long fat_ftell(fatfile_t *f);
+./fpdoom/fatfile.h:int fat_fflush(fatfile_t *f);
+./fpdoom/common.c:unsigned fastchk16(unsigned crc, const void *src, int len) {
+./fpdoom/common.c:void *memcpy(void *dst, const void *src, size_t len) {
+./fpdoom/common.c:void *memset(void *dst, int c, size_t len) {
+./fpdoom/common.c:void *memmove(void *dst, const void *src, size_t len) {
+./fpdoom/common.c:size_t strlen(const char *src) {
+./fpdoom/common.c:char *strcpy(char *dst, const char *src) {
+./fpdoom/common.c:char *strcat(char *dst, const char *src) {
+./fpdoom/common.c:char *strncpy(char *dst, const char *src, size_t len) {
+./fpdoom/common.c:char *strncat(char *dst, const char *src, size_t len) {
+./fpdoom/common.c:int strcmp(const char *src1, const char *src2) {
+./fpdoom/common.c:int strncmp(const char *src1, const char *src2, size_t len) {
+./fpdoom/common.c:int strcasecmp(const char *src1, const char *src2) {
+./fpdoom/common.c:int strncasecmp(const char *src1, const char *src2, size_t len) {
+./fpdoom/common.c:int memcmp(const void *src1, const void *src2, size_t len) {
+./fpdoom/common.c:int toupper(int ch) {
+./fpdoom/common.c:int tolower(int ch) {
+./fpdoom/common.c:long strtol(const char *s, char **end, int base) {
+./fpdoom/common.c:int atoi(const char *s) {
+./fpdoom/common.c:long atol(const char *s) {
+./fpdoom/common.c:void srand(unsigned seed) {
+./fpdoom/common.c:int rand(void) {
+./fpdoom/common.c:void qsort(void *arr, size_t n, size_t size,
+./fpdoom/common.c:void _ZdlPv(void *p) { free(p); }
+./fpdoom/common.c:void _ZdaPv(void *p) { free(p); }
+./fpdoom/common.c:void _ZdlPvj(void *p, unsigned size) { (void)size; free(p); }
+./fpdoom/common.c:int __cxa_atexit(void (*func)(void*), void *arg, void *dso) {
+./fpdoom/common.c:int __aeabi_atexit(void *arg, void (*func)(void*), void *dso) {
+./fpdoom/common.c:void __cxa_pure_virtual(void) { for (;;); }
+./fpdoom/usbio.c:void usb_send_asm(void *dst, const void *src, size_t len);
+./fpdoom/usbio.c:void usb_recv_asm(void *dst, const void *src, size_t len);
+./fpdoom/usbio.c:void usb_init_base(void) {
+./fpdoom/usbio.c:void usb_init(void) {
+./fpdoom/usbio.c:int usb_getchar(int wait) {
+./fpdoom/usbio.c:int usb_read(void *dst, unsigned len, int wait) {
+./fpdoom/usbio.c:int usb_write(const void *src, unsigned len) {
+./fpdoom/sdio.h:void sdio_init(void);
+./fpdoom/sdio.h:int sdcard_init(void);
+./fpdoom/sdio.h:int sdio_read_block(uint32_t idx, uint8_t *buf);
+./fpdoom/sdio.h:int sdio_write_block(uint32_t idx, uint8_t *buf);
+./fpdoom/cxx_init.h:typedef void (*ctor_t)(int, char**, char**);
+./fpdoom/sfc.h:void sfc_init(void);
+./fpdoom/sfc.h:void sfc_cmdclr(sfc_base_t *sfc);
+./fpdoom/sfc.h:void sfc_write_status(int cs, unsigned val);
+./fpdoom/sfc.h:void sfc_write_enable(int cs);
+./fpdoom/sfc.h:void sfc_erase(int cs, int addr, int cmd, int addr_len);
+./fpdoom/sfc.h:void sfc_write(int cs, int addr, const void *buf, unsigned size);
+./fpdoom/sfc.h:void sfc_read(int cs, int addr, void *buf, unsigned size);
+./fpdoom/sfc.h:void sfc_read_sfdp(int cs, int addr, void *buf, unsigned size);
+./fpdoom/sfc.h:unsigned sfc_compare(int cs, int addr, const void *buf, unsigned size, uint32_t mode);
+./fpdoom/sfc.h:void sfc_spiread(int cs);
+./fpdoom/entry.c:void apply_reloc(uint32_t *image, const uint8_t *rel, uint32_t diff);
+./fpdoom/entry.c:void _debug_msg(const char *msg);
+./fpdoom/entry.c:void _malloc_init(void *addr, size_t size);
+./fpdoom/entry.c:void _stdio_init(void);
+./fpdoom/entry.c:int _argv_init(char ***argvp, int skip);
+./fpdoom/entry.c:int _argv_copy(char ***argvp, int argc, char *src);
+./fpdoom/entry.c:size_t app_mem_reserve(void *start, size_t size);
+./fpdoom/entry.c:void sys_prep_vectors(uint32_t *ttb);
+./fpdoom/entry.c:void sys_set_handlers(void);
+./fpdoom/entry.c:int main(int argc, char **argv);
+./fpdoom/entry.c:int entry_main(char *image_addr, uint32_t image_size, uint32_t bss_size, uint8_t *entry2_rel, struct entry2 *entry2) {
+./fpdoom/entry.c:void entry_main(char *image_addr, uint32_t image_size, uint32_t bss_size) {
+./fpdoom/keytrn_pc.c:int sys_event(int *rkey) {
+./fpbuild/fp_layer.c:void setvlinebpl(int dabpl);
+./fpbuild/fp_layer.c:int wm_msgbox(const char *name, const char *fmt, ...) {
+./fpbuild/fp_layer.c:int wm_ynbox(const char *name, const char *fmt, ...) {
+./fpbuild/fp_layer.c:void wm_setapptitle(const char *name) {}
+./fpbuild/fp_layer.c:void wm_setwindowtitle(const char *name) {}
+./fpbuild/fp_layer.c:int main(int argc, char **argv) {
+./fpbuild/fp_layer.c:int initsystem(void) {
+./fpbuild/fp_layer.c:void uninitsystem(void) {
+./fpbuild/fp_layer.c:void initputs(const char *str) {}
+./fpbuild/fp_layer.c:void debugprintf(const char *f, ...) {
+./fpbuild/fp_layer.c:int initinput(void) {
+./fpbuild/fp_layer.c:void uninitinput(void) {}
+./fpbuild/fp_layer.c:void keytrn_init(void) {
+./fpbuild/fp_layer.c:int initmouse(void) {	return 0; }
+./fpbuild/fp_layer.c:void uninitmouse(void) {}
+./fpbuild/fp_layer.c:void grabmouse(int a) {}
+./fpbuild/fp_layer.c:void readmousexy(int *x, int *y) {}
+./fpbuild/fp_layer.c:void readmousebstatus(int *b) {}
+./fpbuild/fp_layer.c:void releaseallbuttons(void) {}
+./fpbuild/fp_layer.c:int inittimer(int tickspersecond, void (*callback)(void)) {
+./fpbuild/fp_layer.c:void uninittimer(void) {
+./fpbuild/fp_layer.c:void sampletimer(void) {
+./fpbuild/fp_layer.c:void getvalidmodes(void) {
+./fpbuild/fp_layer.c:int setvideomode(int x, int y, int c, int fs) {
+./fpbuild/fp_layer.c:void resetvideomode(void) {}
+./fpbuild/fp_layer.c:void showframe(void) {
+./fpbuild/fp_layer.c:int setpalette(int start, int num, unsigned char *dapal) {
+./fpbuild/fp_layer.c:int handleevents(void) {
+./fpbuild/fp_layer.c:void lcd_appinit(void) {
+./fpbuild/unistd.c:int fstat(int fd, struct stat *buf) {
+./fpbuild/unistd.c:int stat(const char *fn, struct stat *buf) {
+./fpbuild/unistd.c:int open(const char *name, int flags, ...) {
+./fpbuild/unistd.c:int close(int fd) {
+./fpbuild/unistd.c:int access(const char *name, int mode) {
+./fpbuild/unistd.c:ssize_t read(int fd, void *buf, size_t count) {
+./fpbuild/unistd.c:ssize_t write(int fd, const void *buf, size_t count) {
+./fpbuild/unistd.c:off_t lseek(int fd, off_t off, int origin) {
+./fpbuild/unistd.c:int *__errno(void) { return &sys_errno; }
+./fpbuild/unistd.c:char *strerror(int errnum) { return "<unknown>"; }
+./fpbuild/eduke32/compat.h:void G_AddGroup(const char *buffer);
+./fpbuild/eduke32/compat.h:void G_AddPath(const char *buffer);
+./fpbuild/eduke32/compat.h:void G_AddDef(const char *buffer);
+./fpbuild/eduke32/compat.h:void fnlist_clearnames(fnlist_t *fnl);
+./fpbuild/eduke32/compat.h:void renderPrepareMirror(int32_t dax, int32_t day, int32_t daz, fix16_t daang,
+./fpbuild/eduke32/compat.h:int getclosestcol(int r, int g, int b);
+./fpbuild/eduke32/compat.h:int setsprite(short spritenum, vec3_t *pos) {
+./fpbuild/eduke32/compat.h:void CONTROL_MapDigitalAxis(int32 whichaxis, int32 whichfunction, int32 direction) {
+./fpbuild/eduke32/compat.h:void CONTROL_MapAnalogAxis(int32 whichaxis, int32 whichanalog) {
+./fpbuild/eduke32/compat.h:void CONTROL_SetAnalogAxisInvert(int32 whichaxis, int32 invert) {}
+./fpbuild/eduke32/compat.h:int OSD_Exec(const char *szScript) { return 0; }
+./fpbuild/eduke32/compat.h:int hitscan(const vec3_t *sv, int sectnum, int vx, int vy, int vz,
+./fpbuild/eduke32/palette.h:void paletteSetColorTable(int32_t id, const uint8_t *table);
+./fpbuild/eduke32/palette.h:void videoSetPalette(char dabrightness, uint8_t dapalid, uint8_t flags) {
+./fpbuild/calctables.c:int main(int argc, char **argv) {
+./fpbuild/a-new.c:void setvlinebpl(int dabpl) { g.bpl = dabpl; }
+./fpbuild/a-new.c:void fixtransluscence(void *datransoff) { g.trans = datransoff; }
+./fpbuild/a-new.c:void settransnormal(void) { g.transmode = 0; }
+./fpbuild/a-new.c:void settransreverse(void) { g.transmode = 1; }
+./fpbuild/a-new.c:void sethlinesizes(int logx, int logy, void *bufplc)
+./fpbuild/a-new.c:void setpalookupaddress(void *paladdr) { g.hlinepal = paladdr; }
+./fpbuild/a-new.c:void setuphlineasm4(int bxinc, int byinc) { g.bxinc = bxinc; g.byinc = byinc; }
+./fpbuild/a-new.c:void setupslopevlin(int logylogx, void *bufplc, int pinc) {
+./fpbuild/a-new.c:void setupvlineasm(int neglogy) { g.logy = neglogy; }
+./fpbuild/a-new.c:void setupmvlineasm(int neglogy) { g.logy = neglogy; }
+./fpbuild/a-new.c:void setuptvlineasm(int neglogy) { g.logy = neglogy; }
+./fpbuild/a-new.c:void msethlineshift(int logx, int logy) { g.logx = logx; g.logy = logy; }
+./fpbuild/a-new.c:void tsethlineshift(int logx, int logy) { g.logx = logx; g.logy = logy; }
+./fpbuild/a-new.c:void setupspritevline(void *paloffs, int bxinc, int byinc, int ysiz) {
+./fpbuild/a-new.c:void msetupspritevline(void *paloffs, int bxinc, int byinc, int ysiz) {
+./fpbuild/a-new.c:void tsetupspritevline(void *paloffs, int bxinc, int byinc, int ysiz) {
+./fpbuild/a-new.c:void setupdrawslab (int dabpl, void *pal) {
+./sdklib/rgb888.c:CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+./sdklib/rgb888.c:hsl_t rgb888_to_hsl(rgb_t *rgb) {
+./sdklib/rgb565.c:rgb_t rgb565_to_rgb888(uint16_t *input) {
+./sdklib/hagl_rectangle.c:void hagl_draw_rectangle_xyxy(
+./sdklib/hagl_rectangle.c:void hagl_fill_rectangle_xyxy(
+./sdklib/hagl_rectangle.c:void hagl_draw_rounded_rectangle_xyxy(
+./sdklib/hagl_rectangle.c:void hagl_fill_rounded_rectangle_xyxy(
+./sdklib/hagl_line.c:void hagl_draw_line(
+./sdklib/hagl_hline.c:void hagl_draw_hline_xyw(
+./sdklib/hagl_color.c:hagl_color_t hagl_color(void const *_surface, uint8_t r, uint8_t g, uint8_t b) {
+./sdklib/include/hsl.h:rgb_t hsl_to_rgb888(hsl_t *hsl);
+./sdklib/include/hagl_hal.h:void hagl_hal_put_pixel(void *surface, int16_t x, int16_t y, hagl_color_t color);
+./sdklib/include/hagl.h:hagl_backend_t *hagl_init(void);
+./sdklib/include/hagl.h:size_t hagl_flush(hagl_backend_t *backend);
+./sdklib/include/hagl.h:void hagl_close(hagl_backend_t *backend);
+./sdklib/include/hagl.h:void hagl_clear(void *surface);
+./sdklib/include/rgb565.h:rgb_t rgb565_to_rgb888(uint16_t *input);
+./sdklib/include/rgb888.h:hsl_t rgb888_to_hsl(rgb_t *rgb);
+./sdklib/include/tjpgd.h:JRESULT jd_prepare (JDEC*, uint16_t(*)(JDEC*,uint8_t*,uint16_t), void*, uint16_t, void*);
+./sdklib/include/tjpgd.h:JRESULT jd_decomp (JDEC*, uint16_t(*)(JDEC*,void*,JRECT*), uint8_t);
+./sdklib/include/hagl/triangle.h:void hagl_draw_triangle(
+./sdklib/include/hagl/triangle.h:void hagl_fill_triangle(
+./sdklib/include/hagl/circle.h:void hagl_draw_circle(
+./sdklib/include/hagl/circle.h:void hagl_fill_circle(
+./sdklib/include/hagl/rectangle.h:void hagl_draw_rectangle_xyxy(
+./sdklib/include/hagl/rectangle.h:void hagl_fill_rectangle_xyxy(
+./sdklib/include/hagl/rectangle.h:void hagl_draw_rounded_rectangle_xyxy(
+./sdklib/include/hagl/rectangle.h:void hagl_fill_rounded_rectangle_xyxy(
+./sdklib/include/hagl/pixel.h:void hagl_put_pixel(void const *surface, int16_t x0, int16_t y0, hagl_color_t color);
+./sdklib/include/hagl/pixel.h:hagl_color_t hagl_get_pixel(void const *surface, int16_t x0, int16_t y0);
+./sdklib/include/hagl/bitmap.h:void hagl_bitmap_init(
+./sdklib/include/hagl/line.h:void hagl_draw_line(
+./sdklib/include/hagl/ellipse.h:void hagl_draw_ellipse(
+./sdklib/include/hagl/ellipse.h:void hagl_fill_ellipse(
+./sdklib/include/hagl/blit.h:void hagl_blit_xy(void const *surface, int16_t x0, int16_t y0, hagl_bitmap_t *source);
+./sdklib/include/hagl/blit.h:void hagl_blit_xywh(
+./sdklib/include/hagl/polygon.h:void hagl_draw_polygon(
+./sdklib/include/hagl/polygon.h:void hagl_fill_polygon(
+./sdklib/include/hagl/vline.h:void hagl_draw_vline_xyh(
+./sdklib/include/hagl/color.h:hagl_color_t hagl_color(void const *surface, uint8_t r, uint8_t g, uint8_t b);
+./sdklib/include/hagl/clip.h:bool hagl_clip_line(
+./sdklib/include/hagl/clip.h:void hagl_set_clip(void *surface, uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1);
+./sdklib/include/hagl/hline.h:void hagl_draw_hline_xyw(
+./sdklib/hagl_blit.c:void hagl_blit_xy(void const *_surface, int16_t x0, int16_t y0, hagl_bitmap_t *source) {
+./sdklib/hagl_blit.c:void hagl_blit_xywh(
+./sdklib/hagl_ellipse.c:void hagl_draw_ellipse(
+./sdklib/hagl_ellipse.c:void hagl_fill_ellipse(
+./sdklib/hagl_bitmap.c:void hline(void *_bitmap, int16_t x0, int16_t y0, uint16_t width, hagl_color_t color) {
+./sdklib/hagl_bitmap.c:void vline(void *_bitmap, int16_t x0, int16_t y0, uint16_t height, hagl_color_t color) {
+./sdklib/hagl_bitmap.c:void hagl_bitmap_init(
+./sdklib/minifplib.h:void lcd_appinit(void) {
+./sdklib/minifplib.h:void keytrn_init(void) {
+./sdklib/minifplib.h:void hagl_hal_put_pixel(void *surface, int16_t x, int16_t y, hagl_color_t color) {
+./sdklib/minifplib.h:void hagl_hal_init(hagl_backend_t *backend) {
+./sdklib/hagl_triangle.c:void hagl_draw_triangle(
+./sdklib/hagl_triangle.c:void hagl_fill_triangle(
+./sdklib/hagl_polygon.c:void hagl_draw_polygon(
+./sdklib/hagl_polygon.c:void hagl_fill_polygon(
+./sdklib/hagl_pixel.c:void hagl_put_pixel(void const *_surface, int16_t x0, int16_t y0, hagl_color_t color) {
+./sdklib/hagl_pixel.c:hagl_color_t hagl_get_pixel(void const *_surface, int16_t x0, int16_t y0) {
+./sdklib/hagl_circle.c:void hagl_draw_circle(
+./sdklib/hagl_circle.c:void hagl_fill_circle(
+./sdklib/tjpgd.c:JRESULT jd_prepare (
+./sdklib/tjpgd.c:JRESULT jd_decomp (
+./sdklib/hagl_vline.c:void hagl_draw_vline_xyh(
+./sdklib/hagl_clip.c:bool hagl_clip_line(
+./sdklib/hagl_clip.c:void hagl_set_clip(void *_surface, uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1) {
+./sdklib/hsl.c:CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+./sdklib/hsl.c:rgb_t hsl_to_rgb888(hsl_t *hsl) {
+./sdklib/hagl.c:void hagl_clear(void *_surface) {
+./sdklib/hagl.c:hagl_backend_t *hagl_init(void) {
+./sdklib/hagl.c:size_t hagl_flush(hagl_backend_t *backend) {
+./sdklib/hagl.c:void hagl_close(hagl_backend_t *backend) {
+./fptest/main.c:void lcd_appinit(void) {
+./fptest/main.c:void test_display(void) {
+./fptest/main.c:void eic_mask_or(unsigned val);
+./fptest/main.c:int eic_read(void);
+./fptest/main.c:int main(int argc, char **argv) {
+./fptest/main.c:void keytrn_init(void) {
+./fpsample/main.c:int main(int argc, char **argv){
+./fpsample/main.c:int get_pressed_key(void) {
+./fpsample/main.c:bool check_collision(int x1,int y1,int w1,int h1,int x2,int y2,int w2,int h2) {

@@ -26,6 +26,7 @@ Some sort of SDK for feature phones, mostly SC6531. Based of fpdoom.
 - fpbuild: ~~stolen~~ code from fpdoom
 - sdklib: basically all libs/headers added here
 - SDKApi_src.txt: GREPed list of all functions for use
+- docs: PDFs, Datasheets
 
 ## How to build:
 - Make a new 'project': copy for example 6531UARTdemo, change name in Makefile and builddeploy.sh
